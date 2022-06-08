@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html style="overflow: hidden" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="imagem/png" href="./img/tetris.png" />
+    <link rel="stylesheet" href="./css/style.css"></link>
+    <link rel="stylesheet" href="./css/telaFinal.css"></link>
+    <title>Tetris</title>
+    <script src="./javascript/funcoes/iniciar.js" defer></script>
+</head>
+
+<body>
+    <audio autoplay="autoplay" src="./sounds/gameover.mp3"></audio>
+    <div class="telaInicial">
+        <img src="./img/telaInicio.jpg" alt="">
+        <div class="container">
+            <div class="titulo">
+                <p>Game Over</p>
+            </div>
+
+            <div class="menu">
+                <p class="pontuacaoFinal">pontuação:</p>
+                <label class="pontuacaoFinal" id="pontos"></label>
+            </div>
+            <div class="jogarNovamente">
+                <p class="jogar">jogar novamente</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var storage = sessionStorage
+    var pontos = document.getElementById("pontos")
+    if(storage.getItem("pontuacao")){
+        var pontuacao = JSON.parse(storage.getItem("pontuacao"))
+    }
+    console.log(pontuacao);
+    pontos.textContent = pontuacao
+</script>
+</html>

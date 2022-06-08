@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html style="overflow: hidden" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="imagem/png" href="./img/tetris.png" />
+    <link rel="stylesheet" href="./css/style.css"></link>
+    <script src="./javascript/funcoes/pontuacao.js" defer></script>
+    <title>Tetris</title>
+  </head>
+
+  <body>
+    <div class="container">
+    <canvas class="canva" id="tela" width="240" height="400"></canvas>
+    <div class="pontuacao">
+      <label style="font-size: 120%" class="pontuacaoLabel">pontuação:</label>
+      <label id="pontuacao" class="pontuacaoLabelNumero"></label>
+    </div>
+    </div>
+  </body>
+  
+  
+  <script src="./javascript/funcoes/carregarSons.js"></script>
+  <script src="./javascript/pecas.js"></script>
+  <script src="./javascript/funcoes/gerarTabuleiro.js"></script>
+  <script src="./javascript/funcoes/movimentoPecas.js"></script>
+  <script src="./javascript/main.js"></script>
+</html>
