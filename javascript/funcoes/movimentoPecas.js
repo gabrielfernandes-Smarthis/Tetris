@@ -28,6 +28,14 @@ function descerPeca() {
   }
 }
 
+function hardDrop() {
+  while (!colisao(0, 1, peca.tetraminoAtivo)) {
+    apagarPeca();
+    peca.y++;
+    desenharPeca();
+  }
+}
+
 function moverAbaixo() {
   if (!colisao(0, 1, peca.tetraminoAtivo)) {
     apagarPeca();
@@ -90,5 +98,7 @@ function controlarPeca(evento) {
     inicioDescida = Date.now();
   } else if (tecla == 40) {
     moverAbaixo();
+  } else if (tecla == 32) {
+    hardDrop();
   }
 }
